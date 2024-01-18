@@ -1,7 +1,6 @@
 package kotlin_experiment9.app
 
 import kotlin_experiment9.utilities.StringUtils
-
 import org.apache.commons.text.WordUtils
 
 fun twice(): String {

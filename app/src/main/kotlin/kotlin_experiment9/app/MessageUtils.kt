@@ -5,6 +5,6 @@ package kotlin_experiment9.app
 
 class MessageUtils {
     companion object {
-        fun getMessage(): String = "Hello      World!"
+        fun getMessage(): String = "Hello World!"
     }
 }
