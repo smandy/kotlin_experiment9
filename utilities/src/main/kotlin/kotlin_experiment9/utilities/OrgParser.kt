@@ -83,16 +83,14 @@ fun main() {
                 }
             }
         } else {
-            fun newString() {
-                StringNode(currentNode).also {
-                    currentNode.children.add(it)
-                    it.strings.add(line)
-                    currentNode = it }
-            }
             when (currentNode) {
                 is StringNode -> (currentNode as StringNode).strings.add(line)
-                else ->
-                    newString()
+                else -> {
+                    StringNode(currentNode).also {
+                        currentNode.children.add(it)
+                        it.strings.add(line)
+                        currentNode = it }
+                }
             }
         }
     }
