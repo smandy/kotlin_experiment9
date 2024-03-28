@@ -17,7 +17,10 @@ sealed class Node() {
 class RootNode() : Node() {
     override val depth = 0
 
-    override val parent = this // DODGY!
+    override val parent : Node by lazy {
+        require(false) {"Shouldn't be here!!!"}
+        this
+    }
 }
 
 data class HeadingNode(val heading: String, override val parent: Node) : Node() {
